@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enroll Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #13ef4a;
+        }
+        .container {
+            width: 500px;
+            padding: 50px;
+            background-color: #f19812;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        input[type="submit"], input[type="reset"], input[type="button"]{
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="button"] {
+            background-color: black;
+        }
+        input[type="reset"] {
+            background-color: #f44336;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover,input[type="button"] {
+            opacity: 0.8;
+        }
+        .details {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="images/Stu_Reg_Icon.JPG" alt="Student Registration Icon" width="100px" height="100px" style="margin-left: auto; margin-right: auto; display: block;">
+        <h2>Student Registration Form</h2>
+        <form id="registrationForm" action="/register" method="POST" target="_self">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+            
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+            
+            <label for="phoneNumber">Phone Number</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" placeholder="Phone Number" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address" placeholder="Email" required>
+            
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" placeholder="Date Of Birth" required>
+            
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location" placeholder="Location" required>
+            
+            <div class="buttons">
+                <input type="submit" value="Enroll">
+                <a href="index.html"><input type="button" value="Go Back To Home" style="color: white;"></a>
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
